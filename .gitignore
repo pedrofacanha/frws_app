@@ -1,7 +1,7 @@
 # Created by venv; see https://docs.python.org/3/library/venv.html
-# Ignore Python bytecode files
+# ignore Python bytecode files
 *.pyc
 __pycache__/
 
-# ignore the .venv folder (virtual environment)
+# ignore .venv folder (virtual environment)
 .venv/
