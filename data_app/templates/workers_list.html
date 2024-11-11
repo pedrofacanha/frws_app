@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workers List</title>
+</head>
+<body>
+    <h1>List of Workers</h1>
+    <ul>
+        {% for worker in workers %}
+            <li>{{ worker.first_name }} {{ worker.last_name }}<br>{{ "Email: " }}{{ worker.email }}</li>  <!-- Display first and last name -->
+        {% empty %}
+            <li>No workers found.</li>  <!-- Message if no workers are found -->
+        {% endfor %}
+    </ul>
+</body>
+</html>
