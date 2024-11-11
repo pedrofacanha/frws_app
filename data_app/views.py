@@ -2,12 +2,12 @@ from django.shortcuts import render,redirect
 from .models import Worker
 from .forms import WorkerForm
 
-# generate a list of people
+# 'workers_list' function
 def person_list(request):
     workers = Worker.objects.all()
     return render(request, 'workers_list.html', {'workers': workers})
 
-# display the form
+# 'forms' function
 def worker_form(request):
     if request.method == 'POST':
         form = WorkerForm(request.POST)
