@@ -1,3 +1,5 @@
+# frws_app\urls.py
+
 """
 URL configuration for frws_app project.
 
@@ -15,8 +17,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
+
+from data_app.views import person_list
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('data-app/', include('data_app.urls')),  # Workers list from your data_app folder
+    path('', person_list),  # this will map the root URL to the person_list view
 ]
