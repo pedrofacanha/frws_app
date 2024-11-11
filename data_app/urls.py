@@ -1,7 +1,8 @@
-# general_info/urls.py
+# data_app/urls.py
 from django.urls import path
 from . import views
 
+# URL route for the Workers data
 urlpatterns = [
-    path('people/', views.person_list, name='workers_list'),
+    path('', views.worker_form, name='worker_form'),
 ]
